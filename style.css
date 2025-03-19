@@ -1,0 +1,100 @@
+* {
+  background-image: url(1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+body {
+  padding-top: 150px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  background-color: #ffffff;
+  border: 5px solid #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.cell.taken {
+  pointer-events: none;
+}
+#status {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.reset {
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  background-color: #ffffff;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.win {
+  color: rgb(255, 255, 255);
+  font-size: large;
+  background-color: #ffffff;
+}
+
+.draw {
+  color: rgb(255, 255, 255);
+  background-color: #ffffff;
+}
+
+button {
+  --glow-color: rgb(255, 255, 255);
+  --glow-spread-color: rgba(255, 255, 255, 0.781);
+  --enhanced-glow-color: rgb(255, 255, 255);
+  --btn-color: rgb(255, 255, 255);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 em 0.25em var(--glow-color),
+    0 0 1em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 0.1em 0em var(--glow-color),
+    0 0 0em 0em var(--glow-spread-color),
+    inset 0 0 0.1em 0.1em var(--glow-color);
+}
+
+button:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
+}
